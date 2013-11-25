@@ -1,0 +1,15 @@
+
+Using Netbeans
+
+Download zip file.
+Import project in NEtbeans -> import as ZIP - select Medicord.zip
+Click project properties and make sure odbc5.jar is added to the project library
+Run project by clicking green arrow or right click Login.java and run file.
+
+Using Eclipse
+
+The program runs in eclipse as well (using new->java project->create project from existing source). 
+
+However, it is recommended to use netbeans for the project
+
+Clear database by right clicking Driver.java and run file.
