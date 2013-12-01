@@ -188,14 +188,14 @@ public class createAccount extends javax.swing.JFrame {
     
     private boolean passwordVerified(String s){
         System.out.println(s);
-        /*if(s==null){
+        if(s==null){
             JOptionPane.showMessageDialog(this, "Error, password must be between 5 and 15 charactors long");
             return false;
         }
         if(s.length()<5 || s.length()>15){
             JOptionPane.showMessageDialog(this, "Error, password must be between 5 and 15 charactors long");
             return false;
-        }*/
+        }
         return true;
     }
     
