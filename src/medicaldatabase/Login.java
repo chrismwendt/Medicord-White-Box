@@ -131,11 +131,11 @@ public class Login extends javax.swing.JFrame
        
         
         userId = Importdb.signindb(usernameTextField.getText(), password);
-     /**   if (userId == null || userId.length()<=0)
+        if (userId == null || userId.length()<=0)
         {
             JOptionPane.showMessageDialog(this, "Login or password does not match");
             return;
-        }**/
+        }
         if (userId.charAt(0)=='d')
         {
             frmDoctor frmDoc = new frmDoctor(this);
@@ -146,10 +146,10 @@ public class Login extends javax.swing.JFrame
             frmPatient frm = new frmPatient(this);
            
         }
- /**       else
+        else
         {
             JOptionPane.showMessageDialog(this, "Login or password does not match");
-        }        **/
+        }       
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void createAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountBtnActionPerformed
