@@ -35,7 +35,7 @@ public class Login extends javax.swing.JFrame
         loginBtn = new javax.swing.JButton();
         createAccountBtn = new javax.swing.JButton();
         usernameTextField = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Medicord");
@@ -199,7 +199,7 @@ public class Login extends javax.swing.JFrame
     private javax.swing.JButton createAccountBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JButton loginBtn;
     private javax.swing.JTextField usernameTextField;
     // End of variables declaration//GEN-END:variables
