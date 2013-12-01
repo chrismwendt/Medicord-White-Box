@@ -215,17 +215,17 @@ public class createAccount extends javax.swing.JFrame {
             if(jRadioButton1.isSelected()==true ){
                 System.out.println("Creating patient account");
                 uid=Importdb.createAccount("patient",username,password);
-                /*if(uid == null)
+                if(uid == null)
                 {
                       //Error
                       JOptionPane.showMessageDialog(this, "Username already exists, please select a new username.");
-                }else{*/
+                }else{
                     //Successful patient account created and sign in
                    JOptionPane.showMessageDialog(this, "Account successfully created!");
                     System.out.println("Successfully creating patient account");
                     login.setVisible(true);
                     this.dispose();
-                //}
+                }
             }
             if(jRadioButton2.isSelected() == true){
                 System.out.println("Creating doctor account");
