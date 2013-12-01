@@ -110,8 +110,10 @@ public class Login extends javax.swing.JFrame
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
-        /**
-        if (jPasswordField1.getText().isEmpty() && usernameTextField.getText().isEmpty() == true)
+       
+       String password = new String(jPasswordField1.getPassword());
+        
+        if (password.isEmpty() && usernameTextField.getText().isEmpty() == true)
         {
             JOptionPane.showMessageDialog(this, "Enter Username and Password");
             return;
@@ -121,13 +123,14 @@ public class Login extends javax.swing.JFrame
             JOptionPane.showMessageDialog(this, "Username is empty");
             return;
         }
-        if (jPasswordField1.getText().isEmpty() == true)
+        if (password.isEmpty() == true)
         {
             JOptionPane.showMessageDialog(this, "Password is empty");
             return;
         }
-        **/
-        userId = Importdb.signindb(usernameTextField.getText(), jPasswordField1.getText());
+       
+        
+        userId = Importdb.signindb(usernameTextField.getText(), password);
      /**   if (userId == null || userId.length()<=0)
         {
             JOptionPane.showMessageDialog(this, "Login or password does not match");

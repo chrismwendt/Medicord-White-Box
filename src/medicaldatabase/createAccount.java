@@ -203,8 +203,8 @@ public class createAccount extends javax.swing.JFrame {
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         username = jTextField1.getText();
-        password = new String(jTextField2.getText());
-        passVer = new String(jTextField3.getText());
+        password = new String(jTextField2.getPassword());
+        passVer = new String(jTextField3.getPassword());
         if(userVerified(username) == true && passwordVerified(password) == true) {            
            if (password.equals(passVer) == false)
             {
@@ -293,8 +293,8 @@ public class createAccount extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JPasswordField jTextField2;
+    private javax.swing.JPasswordField jTextField3;
     // End of variables declaration                   
 }
 
