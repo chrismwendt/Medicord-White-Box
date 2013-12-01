@@ -45,8 +45,8 @@ public class createAccount extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JPasswordField();
+        jTextField3 = new javax.swing.JPasswordField();
 
         buttonGroup1.add(jRadioButton1);
         buttonGroup1.add(jRadioButton2);
@@ -209,6 +209,7 @@ public class createAccount extends javax.swing.JFrame {
            if (password.equals(passVer) == false)
             {
                 JOptionPane.showMessageDialog(this, "Error, Passwords do not match!");
+                return; 
             }
             String uid;
             
