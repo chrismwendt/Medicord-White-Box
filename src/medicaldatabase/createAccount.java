@@ -206,10 +206,10 @@ public class createAccount extends javax.swing.JFrame {
         password = new String(jTextField2.getText());
         passVer = new String(jTextField3.getText());
         if(userVerified(username) == true && passwordVerified(password) == true) {            
-           /* if (password.equals(passVer) == false)
+           if (password.equals(passVer) == false)
             {
                 JOptionPane.showMessageDialog(this, "Error, Passwords do not match!");
-            }*/
+            }
             String uid;
             
             if(jRadioButton1.isSelected()==true ){
