@@ -176,13 +176,13 @@ public class createAccount extends javax.swing.JFrame {
 
     private boolean userVerified(String s){
         System.out.println(s);
-        /*if(s==null){
+        if(s==null){
             return false;
         }
         if(s.length()<5 || s.length()>12){
             JOptionPane.showMessageDialog(this, "Error, Username must be within 5 to 12 charactors long");
             return false;
-        }*/
+        }
         return true;
     }
     
