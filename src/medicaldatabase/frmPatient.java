@@ -428,6 +428,7 @@ public class frmPatient extends javax.swing.JFrame {
         // TODO add your handling code here:
         frmPatientApptInfo apptInfo = new frmPatientApptInfo(this, id);
         apptInfo.setVisible(true);
+        updateApptTable();
     }//GEN-LAST:event_bttMakenewappointmentActionPerformed
 
     private void bttCancleApptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttCancleApptActionPerformed
