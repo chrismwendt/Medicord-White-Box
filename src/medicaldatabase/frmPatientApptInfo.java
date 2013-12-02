@@ -231,7 +231,7 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
                         .addComponent(notes, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSchedule, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25))))
         );
@@ -271,13 +271,13 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
 
     private void btnScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnScheduleActionPerformed
         // TODO add your handling code here:
-        /*if(txtDate.getText().equals("")||txtDate.getText().equals("")){
+        if(txtDate.getText().equals("")||txtDate.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Please enter a date.");
             txtDate.requestFocusInWindow();
             return;
-        }*/
+        }
         
-        /*java.util.Date inputDate = null;
+        java.util.Date inputDate = null;
         java.util.Date currTime = new java.util.Date();
         DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);
         try{
@@ -290,15 +290,15 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "The date entered is in the past, please enter a valid date in the future.");
             txtDate.requestFocusInWindow();
             return;
-        }*/
-        //if(cmbDoctors.getSelectedIndex() != -1) {
+        }
+        if(cmbDoctors.getSelectedIndex() != -1) {
             Importdb.makeAppointment(doctorUids.get(cmbDoctors.getSelectedIndex()), uid, txtReason.getText(), txtDate.getText());
             JOptionPane.showMessageDialog(null, "Appointment has been scheduled!");
-            //patient.updateApptTable();
-            //this.dispose();
-        //}else{
-           // JOptionPane.showMessageDialog(null, "No doctor is selected.");
-        //} 
+            patient.updateApptTable();
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(null, "No doctor is selected.");
+        } 
     }//GEN-LAST:event_btnScheduleActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
@@ -314,12 +314,12 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
 
     private void txtReasonKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtReasonKeyTyped
         // TODO add your handling code here:
-        /*if(evt.getKeyCode() != KeyEvent.VK_BACK_SPACE){ 
+        if(evt.getKeyCode() != KeyEvent.VK_BACK_SPACE){ 
             if(txtReason.getText().length()>99){
                 txtReason.setText(txtReason.getText().substring(0,99));
                 JOptionPane.showMessageDialog(this, "Character Limit exceeded");
             }
-        }*/
+        }
     }//GEN-LAST:event_txtReasonKeyTyped
 
     private void notesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_notesKeyTyped
