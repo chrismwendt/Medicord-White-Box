@@ -298,7 +298,7 @@ public class frmDoctor extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Patient Name", "Date of appointment"
+                "No", "Patient Name", "Appointment Date"
             }){
                 public boolean isCellEditable(int row, int column) {
                     //all cells false
@@ -520,6 +520,7 @@ public class frmDoctor extends javax.swing.JFrame {
                 appDates.clear();
                 patientNames.clear();
                 while(r.next()){
+                   
                     appIds.add(r.getString("aid"));
                     appDates.add(r.getString("dates"));
                     patientNames.add(Importdb.getName(r.getString("pid")));
