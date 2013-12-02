@@ -62,7 +62,7 @@ public class frmDoctor extends javax.swing.JFrame {
                     nameTextField.setText(rsK.getString("name"));
                 }
                 
-                if(nameTextField.getText().isEmpty())
+                if(nameTextField.getText() == null || nameTextField.getText().isEmpty())
                 {
                     welcomeLabel.setText("Welcome, please fill out your information.");
                 }
