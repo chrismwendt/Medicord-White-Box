@@ -441,6 +441,10 @@ public class frmPatient extends javax.swing.JFrame {
         // save changes button
     	    if (txtName.getText().matches("[0-9]+")){
     	    	JOptionPane.showMessageDialog(this, "Name shouldn't be a number");
+    	    	return;
+    	    } else if(txtEmergencyContact.getText().length() >= 11 || txtEmergencyContact.getText().length() < 7) {
+    	    	JOptionPane.showMessageDialog(this, "Emergency Contact number is not valid");
+    	    	return;
     	    }
 
             if (male.isSelected())
