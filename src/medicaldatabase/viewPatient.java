@@ -3,7 +3,6 @@ package medicaldatabase;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 public class viewPatient extends javax.swing.JFrame {
     

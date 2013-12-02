@@ -4,7 +4,6 @@ import static javax.swing.GroupLayout.Alignment.BASELINE;
 import static javax.swing.GroupLayout.Alignment.LEADING;
 
 import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,40 +15,14 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import javax.swing.border.TitledBorder;
 
-import java.io.*;
-import java.sql.*;
-import java.util.*;
-import java.util.Date;
-import java.sql.ResultSetMetaData;
-
-import javax.swing.event.TableModelListener;
-import javax.swing.table.TableModel;
-import javax.sql.RowSetEvent;
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-
-import javax.sql.RowSetListener;
-import javax.sql.rowset.CachedRowSet;
-//////
-
-import javax.swing.table.AbstractTableModel;
-
-import java.awt.GridLayout;
-import java.awt.GridLayout;
 
 public class GUI implements ActionListener {
 

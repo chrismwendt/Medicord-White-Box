@@ -1,7 +1,6 @@
 package medicaldatabase;
 
 import java.sql.ResultSet;
-import javax.swing.table.DefaultTableModel;
 
 public class viewDoctor extends javax.swing.JFrame {
 

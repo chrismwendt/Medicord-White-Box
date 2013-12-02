@@ -1,7 +1,6 @@
 package medicaldatabase;
 
 import java.awt.Dimension;
-import java.awt.event.KeyEvent;
 import java.sql.*;
 import java.text.DateFormat;
 import java.util.*;

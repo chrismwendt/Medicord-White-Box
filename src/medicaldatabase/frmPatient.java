@@ -1,17 +1,13 @@
 package medicaldatabase;
 
-import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.DateFormat;
 import java.util.*;
 import java.util.regex.Pattern;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
-
-import java.io.*;
 
 public class frmPatient extends javax.swing.JFrame {
     private Login login;

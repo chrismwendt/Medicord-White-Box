@@ -1,6 +1,5 @@
 package medicaldatabase;
 
-import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -11,8 +10,6 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
-
-import oracle.sql.DATE;
 
 public class frmDoctor extends javax.swing.JFrame {
 
