@@ -430,9 +430,9 @@ public class frmDoctor extends javax.swing.JFrame {
           return;
        }
        
-       if(phoneTextField.getText().length() != 10) {
+       if(phoneTextField.getText().length() < 14) {
     	   JOptionPane.showMessageDialog(this,
-                   "Phone number must be 10 digits long");
+                   "Invalid phone number");
              return;
        }
        
