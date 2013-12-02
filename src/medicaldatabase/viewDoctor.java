@@ -102,6 +102,11 @@ public class viewDoctor extends javax.swing.JFrame {
                 nameTextFieldActionPerformed(evt);
             }
         });
+        
+        nameTextField.setEditable(false);
+        specialtiesTextField.setEditable(false);
+        hospitalTextField.setEditable(false);
+        phoneTextField.setEditable(false);
 
         specialtiesLabel.setText("Specialties");
 
