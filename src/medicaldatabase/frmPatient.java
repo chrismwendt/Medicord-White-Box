@@ -439,11 +439,20 @@ public class frmPatient extends javax.swing.JFrame {
 
     private void bttSaveChangesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttSaveChangesActionPerformed
         // save changes button
+    	
+    	String[] date = txtDob.getText().split("/");
+    	int month = Integer.parseInt(date[0]);
+    	int day = Integer.parseInt(date[1]);
+    	int year = Integer.parseInt(date[2]);
+    	
     	    if (txtName.getText().matches("[0-9]+")){
     	    	JOptionPane.showMessageDialog(this, "Name shouldn't be a number");
     	    	return;
     	    } else if(txtEmergencyContact.getText().length() >= 11 || txtEmergencyContact.getText().length() < 7 || !txtEmergencyContact.getText().matches("[0-9]+")) {
     	    	JOptionPane.showMessageDialog(this, "Emergency Contact number is not valid");
+    	    	return;
+    	    } else if(month > 12 || month < 1 || day > 31 || day < 1 || year < 1 || !date[3].isEmpty()) {
+    	    	JOptionPane.showMessageDialog(this, "Date of birth is not valid or isn't in proper format (mm/dd/yyyy)");
     	    	return;
     	    }
 
