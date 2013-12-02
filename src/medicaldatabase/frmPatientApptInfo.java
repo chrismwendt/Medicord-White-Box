@@ -158,11 +158,7 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
 
         txtReason.setColumns(20);
         txtReason.setRows(5);
-        txtReason.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtReasonKeyTyped(evt);
-            }
-        });
+        txtReason.setDocument(new JTextFieldLimit(99));
         jScrollPane1.setViewportView(txtReason);
 
         btnSchedule.setText("Schedule!");
@@ -191,11 +187,7 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
                 notesActionPerformed(evt);
             }
         });
-        notes.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                notesKeyTyped(evt);
-            }
-        });
+        notes.setDocument(new JTextFieldLimit(99));
 
         noteslb.setText("Notes:");
 
@@ -311,28 +303,6 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
     private void notesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_notesActionPerformed
-
-    private void txtReasonKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtReasonKeyTyped
-        // TODO add your handling code here:
-        if(evt.getKeyCode() != KeyEvent.VK_BACK_SPACE){ 
-            if(txtReason.getText().length()>99){
-                txtReason.setText(txtReason.getText().substring(0,99));
-                JOptionPane.showMessageDialog(this, "Character Limit exceeded");
-            }
-        }
-    }//GEN-LAST:event_txtReasonKeyTyped
-
-    private void notesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_notesKeyTyped
-        // TODO add your handling code here:
-        if(notes.getText().length()>=99){
-            if(evt.getKeyCode() != KeyEvent.VK_BACK_SPACE){  
-        //code to execute if backspace is pressed
-            notes.setText(notes.getText().substring(0,99));
-            JOptionPane.showMessageDialog(this, "Character Limit exceeded");
-
-            }
-        }
-    }//GEN-LAST:event_notesKeyTyped
 
     private void btnLookupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLookupActionPerformed
         // TODO add your handling code here:
