@@ -140,12 +140,6 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
 
         jLabel2.setText("Doctor:");
 
-        cmbDoctors.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbDoctorsActionPerformed(evt);
-            }
-        });
-
         jLabel3.setText("Reason for Visit:");
 
         txtReason.setColumns(20);
@@ -173,12 +167,7 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
                 btnLookupActionPerformed(evt);
             }
         });
-
-        notes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                notesActionPerformed(evt);
-            }
-        });
+        
         notes.setDocument(new JTextFieldLimit(99));
 
         noteslb.setText("Notes:");
@@ -292,10 +281,6 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
         patient.updateApptTable();
     }//GEN-LAST:event_btnCancelActionPerformed
 
-    private void notesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_notesActionPerformed
-
     private void btnLookupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLookupActionPerformed
         // TODO add your handling code here:
     	if(cmbDoctors.getSelectedIndex() == -1) {
@@ -304,10 +289,6 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
         viewDoctor doctor = new viewDoctor(doctorUids.get(cmbDoctors.getSelectedIndex()));
         doctor.setVisible(true);
     }//GEN-LAST:event_btnLookupActionPerformed
-
-    private void cmbDoctorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDoctorsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbDoctorsActionPerformed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;

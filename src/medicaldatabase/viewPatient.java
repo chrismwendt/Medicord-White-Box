@@ -123,11 +123,6 @@ public class viewPatient extends javax.swing.JFrame {
 
         jLabel10.setText("Medical History:");
 
-        txtEmergencyContact.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmergencyContactActionPerformed(evt);
-            }
-        });
         txtEmergencyContact.setEditable(false);
 
         jButton4.setText("Close");
@@ -138,11 +133,6 @@ public class viewPatient extends javax.swing.JFrame {
         });
 
         txtDob.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-        txtDob.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDobActionPerformed(evt);
-            }
-        });
         txtDob.setEditable(false);
 
         female.setText("Female");
@@ -260,17 +250,9 @@ public class viewPatient extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtEmergencyContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmergencyContactActionPerformed
-
-    }//GEN-LAST:event_txtEmergencyContactActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void txtDobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDobActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDobActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton female;

@@ -46,11 +46,6 @@ public class createAccount extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Medicord");
         setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                formPropertyChange(evt);
-            }
-        });
 
         jButton1.setText("Create");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -73,19 +68,6 @@ public class createAccount extends javax.swing.JFrame {
         jLabel3.setText("Confirm Password");
 
         jLabel4.setText("Account Type");
-
-        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTextField1FocusLost(evt);
-            }
-        });
-        jTextField1.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-            }
-            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                jTextField1InputMethodTextChanged(evt);
-            }
-        });
 
         jRadioButton1.setText("Patient");
 
@@ -160,10 +142,6 @@ public class createAccount extends javax.swing.JFrame {
 // TODO add your handling code here:
     login.setVisible(true);
    this.dispose();
-    }                                        
-
-    private void formPropertyChange(java.beans.PropertyChangeEvent evt) {                                    
-        // TODO add your handling code here:
     }                                   
 
     private boolean userVerified(String s){
@@ -235,15 +213,7 @@ public class createAccount extends javax.swing.JFrame {
                 }
             }
         }// TODO add your handling code here:
-    }                                        
-
-    private void jTextField1InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {                                                   
-        // TODO add your handling code here:
-    }                                                  
-
-    private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {                                      
-        // TODO add your handling code here
-    }                                     
+    }                                  
 
     // Variables declaration - do not modify                     
     private javax.swing.ButtonGroup buttonGroup1;

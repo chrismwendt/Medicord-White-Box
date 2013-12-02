@@ -87,12 +87,6 @@ public class viewDoctor extends javax.swing.JFrame {
         setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
 
         nameLabel.setText("Name");
-
-        nameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameTextFieldActionPerformed(evt);
-            }
-        });
         
         nameTextField.setEditable(false);
         specialtiesTextField.setEditable(false);
@@ -208,10 +202,6 @@ public class viewDoctor extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnCloseActionPerformed
-
-    private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameTextFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel basicInfoPanel;

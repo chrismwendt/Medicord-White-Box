@@ -104,49 +104,19 @@ public class frmPatient extends javax.swing.JFrame {
 
         txaAllergies.setColumns(20);
         txaAllergies.setRows(5);
-        txaAllergies.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txaAllergiesKeyTyped(evt);
-            }
-        });
         jScrollPane1.setViewportView(txaAllergies);
 
         txaMedicalHistory.setColumns(20);
         txaMedicalHistory.setRows(5);
-        txaMedicalHistory.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txaMedicalHistoryKeyTyped(evt);
-            }
-        });
         jScrollPane2.setViewportView(txaMedicalHistory);
 
         txaCurrentMedication.setColumns(20);
         txaCurrentMedication.setRows(5);
-        txaCurrentMedication.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txaCurrentMedicationKeyTyped(evt);
-            }
-        });
         jScrollPane4.setViewportView(txaCurrentMedication);
 
         jLabel8.setText("Current Medication:");
 
         jLabel10.setText("Medical History:");
-
-        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtNameKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNameKeyTyped(evt);
-            }
-        });
-
-        txtEmergencyContact.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmergencyContactActionPerformed(evt);
-            }
-        });
 
         bttSaveChanges.setText("Save Changes");
         bttSaveChanges.addActionListener(new java.awt.event.ActionListener() {
@@ -470,30 +440,6 @@ public class frmPatient extends javax.swing.JFrame {
 
             JOptionPane.showMessageDialog(this, "Credentials saved!");
     }//GEN-LAST:event_bttSaveChangesActionPerformed
-
-    private void txtEmergencyContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmergencyContactActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmergencyContactActionPerformed
-
-    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
-
-    }//GEN-LAST:event_txtNameKeyTyped
-
-    private void txtNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyPressed
-
-    }//GEN-LAST:event_txtNameKeyPressed
-
-    private void txaCurrentMedicationKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txaCurrentMedicationKeyTyped
-
-    }//GEN-LAST:event_txaCurrentMedicationKeyTyped
-
-    private void txaMedicalHistoryKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txaMedicalHistoryKeyTyped
-
-    }//GEN-LAST:event_txaMedicalHistoryKeyTyped
-
-    private void txaAllergiesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txaAllergiesKeyTyped
-
-    }//GEN-LAST:event_txaAllergiesKeyTyped
 
     public void updateApptTable() {
         DefaultTableModel model = (DefaultTableModel)tblAppointments.getModel(); 
