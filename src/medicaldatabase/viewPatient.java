@@ -104,23 +104,28 @@ public class viewPatient extends javax.swing.JFrame {
         jLabel5.setText("Emergency Contact Number:");
 
         jLabel7.setText("Allergies:");
+        
+        txtName.setEditable(false);
 
         txaAllergies.setColumns(20);
         txaAllergies.setRows(5);
         txaAllergies.setWrapStyleWord(true);
         txaAllergies.setAutoscrolls(false);
+        txaAllergies.setEditable(false);
         jScrollPane1.setViewportView(txaAllergies);
 
         txaMedicalHistory.setColumns(20);
         txaMedicalHistory.setRows(5);
         txaMedicalHistory.setWrapStyleWord(true);
         txaMedicalHistory.setAutoscrolls(false);
+        txaMedicalHistory.setEditable(false);
         jScrollPane2.setViewportView(txaMedicalHistory);
 
         txaCurrentMedication.setColumns(20);
         txaCurrentMedication.setRows(5);
         txaCurrentMedication.setWrapStyleWord(true);
         txaCurrentMedication.setAutoscrolls(false);
+        txaCurrentMedication.setEditable(false);
         jScrollPane4.setViewportView(txaCurrentMedication);
 
         jLabel8.setText("Current Medication:");
@@ -132,6 +137,7 @@ public class viewPatient extends javax.swing.JFrame {
                 txtEmergencyContactActionPerformed(evt);
             }
         });
+        txtEmergencyContact.setEditable(false);
 
         jButton4.setText("Close");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -146,6 +152,7 @@ public class viewPatient extends javax.swing.JFrame {
                 txtDobActionPerformed(evt);
             }
         });
+        txtDob.setEditable(false);
 
         female.setText("Female");
         female.setEnabled(false);
