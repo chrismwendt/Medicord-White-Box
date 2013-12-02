@@ -7,6 +7,8 @@ package medicaldatabase;
 import java.sql.*;
 import java.io.*;
 import java.util.*;
+
+import javax.swing.JOptionPane;
 /**
  *
  * @author Seth
@@ -60,6 +62,7 @@ public class MedicalDatabase {
                     ex.printStackTrace();
                     ex=ex.getNextException();
                 }
+                JOptionPane.showMessageDialog(null, "There may be a problem with your internet connection");
             }
             catch(IOException ex)
             {
@@ -97,16 +100,16 @@ public class MedicalDatabase {
 
                 ResultSet rs = stat.executeQuery(search);
 
-                   /**while ( rs.next() ) {
-                String statu = rs.getString("status"); 
-                id = rs.getInt("id");
-                                if (statu.equals("Doctor")){
-                                return id;
+                while ( rs.next() ) {
+                	String statu = rs.getString("status"); 
+                	id = rs.getInt("id");
+                        if (statu.equals("Doctor")){
+                              return id;
                         }
                         if (statu.equals("Patient")){
                         return id;
                         }    
-            }**/
+                }
 
                 stat.close();	
                 conn.close(); 
@@ -119,6 +122,7 @@ public class MedicalDatabase {
                     ex.printStackTrace();
                     ex=ex.getNextException();
                 }
+                JOptionPane.showMessageDialog(null, "There may be a problem with your internet connection");
             }
             catch(IOException ex)
             {
