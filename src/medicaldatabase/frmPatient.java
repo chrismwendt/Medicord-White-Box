@@ -455,6 +455,7 @@ public class frmPatient extends javax.swing.JFrame {
       {
          JOptionPane.showMessageDialog(this,
                "Name must be only letters and spaces");
+         return;
       }
 
             if (male.isSelected())

@@ -8,8 +8,11 @@ import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
+
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.MaskFormatter;
 
 /**
  *
@@ -129,6 +132,13 @@ public class frmDoctor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+          
+       MaskFormatter phoneMask = null;
+       try {
+          phoneMask = new MaskFormatter("(###) ###-####");
+       }
+       catch(Exception e) {}
+
         buttonGroup1 = new javax.swing.ButtonGroup();
         welcomeLabel = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -140,7 +150,7 @@ public class frmDoctor extends javax.swing.JFrame {
         companyLabel = new javax.swing.JLabel();
         hospitalTextField = new javax.swing.JTextField();
         phoneLabel = new javax.swing.JLabel();
-        phoneTextField = new javax.swing.JTextField();
+        phoneTextField = new javax.swing.JFormattedTextField(phoneMask);
         saveInfoButton = new javax.swing.JButton();
         genderLabel = new javax.swing.JLabel();
         maleRadioBtn = new javax.swing.JRadioButton();
@@ -166,7 +176,7 @@ public class frmDoctor extends javax.swing.JFrame {
         });
 
         welcomeLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        welcomeLabel.setText("Welcome username!");
+        welcomeLabel.setText("Welcome!");
 
         jTabbedPane1.setBackground(new java.awt.Color(204, 255, 153));
         jTabbedPane1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -405,47 +415,14 @@ public class frmDoctor extends javax.swing.JFrame {
     private void saveInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveInfoButtonActionPerformed
         // TODO add your handling code here:
 
-        StringBuilder phone = new StringBuilder();
-        char[] chars = phoneTextField.getText().toCharArray();
-        //Character [] digits = new Character[10];
-        //int j=0;
-        for(int i=0;i<chars.length;i++){
-            if(Character.isDigit(chars[i])){
-                //digits[j] = chars[i];
-                phone.append(chars[i]);
-                //j++;
-            }
-            //          for (int i = 0; i < chars.length; i++) {
-                //  characters[i]=chars[i];
-                //  System.out.println(chars[i]);
-            }
-
-            int pLen = phone.toString().length();
-            StringBuilder modNum = new StringBuilder();
-            switch(pLen){
-                case 0:
-                phoneTextField.setText("");
-                break;
-                case 7:
-                modNum.append(phone.substring(0, 3));
-                modNum.append("-");
-                modNum.append(phone.substring(3, 7));
-                phoneTextField.setText(modNum.toString());
-                break;
-                case 10:
-                modNum.append("(");
-                modNum.append(phone.substring(0, 3));
-                modNum.append(")");
-                modNum.append(phone.substring(3, 6));
-                modNum.append("-");
-                modNum.append(phone.substring(6, 10));
-                phoneTextField.setText(modNum.toString());
-                break;
-                default:
-                JOptionPane.showMessageDialog(this, "Please Enter Valid Phone Number!");
-                return;
-            }
-
+       Pattern p = Pattern.compile("[^a-zA-Z\\s]");
+       boolean hasSpecialChar = p.matcher(nameTextField.getText()).find();
+       if (hasSpecialChar)
+       {
+          JOptionPane.showMessageDialog(this,
+                "Name must be only letters and spaces");
+          return;
+       }
             if (maleRadioBtn.isSelected())
             {
                 Importdb.setDoctorProfile(userId, nameTextField.getText(), hospitalTextField.getText(), specialtiesTextField.getText(), "M", phoneTextField.getText());
