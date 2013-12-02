@@ -439,7 +439,9 @@ public class frmPatient extends javax.swing.JFrame {
 
     private void bttSaveChangesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttSaveChangesActionPerformed
         // save changes button
-     
+    	    if (txtName.getText().matches("[0-9]+")){
+    	    	JOptionPane.showMessageDialog(this, "Name shouldn't be a number");
+    	    }
 
             if (male.isSelected())
             {
