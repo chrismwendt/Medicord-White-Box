@@ -423,6 +423,13 @@ public class frmDoctor extends javax.swing.JFrame {
                 "Name must be only letters and spaces");
           return;
        }
+       if(nameTextField.getText().length() > 19)
+       {
+          nameTextField.setText(nameTextField.getText().substring(0, 19));
+          JOptionPane.showMessageDialog(this,
+                "Name can only be 20 characters");
+          return;
+       }
             if (maleRadioBtn.isSelected())
             {
                 Importdb.setDoctorProfile(userId, nameTextField.getText(), hospitalTextField.getText(), specialtiesTextField.getText(), "M", phoneTextField.getText());
