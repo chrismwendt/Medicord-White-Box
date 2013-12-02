@@ -452,13 +452,6 @@ public class frmPatient extends javax.swing.JFrame {
                "Name must be only letters and spaces");
          return;
       }
-      if(txtName.getText().length() > 19)
-      {
-         txtName.setText(txtName.getText().substring(0, 19));
-         JOptionPane.showMessageDialog(this,
-               "Name can only be 20 characters");
-         return;
-      }
 
             if (male.isSelected())
             {
