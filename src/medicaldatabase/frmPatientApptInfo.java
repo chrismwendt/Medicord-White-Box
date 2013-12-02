@@ -271,7 +271,7 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
 
     private void btnScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnScheduleActionPerformed
         // TODO add your handling code here:
-        if(txtDate.getText().equals("")||txtDate.getText().equals("")){
+        if(txtDate.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Please enter a date.");
             txtDate.requestFocusInWindow();
             return;
@@ -324,14 +324,14 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
 
     private void notesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_notesKeyTyped
         // TODO add your handling code here:
-        /*if(notes.getText().length()>=99){
+        if(notes.getText().length()>=99){
             if(evt.getKeyCode() != KeyEvent.VK_BACK_SPACE){  
         //code to execute if backspace is pressed
             notes.setText(notes.getText().substring(0,99));
             JOptionPane.showMessageDialog(this, "Character Limit exceeded");
 
             }
-        }*/ 
+        }
     }//GEN-LAST:event_notesKeyTyped
 
     private void btnLookupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLookupActionPerformed
