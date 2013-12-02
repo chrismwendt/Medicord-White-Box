@@ -160,6 +160,9 @@ public class frmPatient extends javax.swing.JFrame {
         female.setText("Female");
 
         male.setText("Male");
+        buttonGroup1.add(male);
+        buttonGroup1.add(female);
+        male.setSelected(true);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
