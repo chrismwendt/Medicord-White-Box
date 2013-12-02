@@ -18,10 +18,6 @@ import javax.swing.text.MaskFormatter;
 
 import oracle.sql.DATE;
 
-/**
- *
- * @author Seth
- */
 public class frmDoctor extends javax.swing.JFrame {
 
     Login loginForm = null;

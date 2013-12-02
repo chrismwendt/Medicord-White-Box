@@ -9,10 +9,6 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Austin
- */
 public class viewPatient extends javax.swing.JFrame {
     
     /**

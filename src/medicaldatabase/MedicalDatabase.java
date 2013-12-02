@@ -9,10 +9,7 @@ import java.io.*;
 import java.util.*;
 
 import javax.swing.JOptionPane;
-/**
- *
- * @author Seth
- */
+
 public class MedicalDatabase {
 	
 	private static void createdb()

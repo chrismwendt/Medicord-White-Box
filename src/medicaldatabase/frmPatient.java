@@ -16,10 +16,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
 import java.io.*;
-/**
- *
- * @author Seth
- */
+
 public class frmPatient extends javax.swing.JFrame {
     private Login login;
     private String id;

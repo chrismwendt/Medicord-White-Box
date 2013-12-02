@@ -7,10 +7,6 @@ package medicaldatabase;
 import java.sql.ResultSet;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Austin
- */
 public class viewDoctor extends javax.swing.JFrame {
 
     /**

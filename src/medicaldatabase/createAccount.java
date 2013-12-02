@@ -6,10 +6,6 @@ package medicaldatabase;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author carrolla
- */
 public class createAccount extends javax.swing.JFrame {
 
     /**

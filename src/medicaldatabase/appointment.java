@@ -4,10 +4,6 @@
  */
 package medicaldatabase;
 
-/**
- *
- * @author carrolla
- */
 public class appointment extends javax.swing.JFrame {
 
     /**

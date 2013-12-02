@@ -10,10 +10,7 @@ import java.sql.*;
 import java.text.DateFormat;
 import java.util.*;
 import javax.swing.*;
-/**
- *
- * @author Austin
- */
+
 public class frmPatientApptInfo extends javax.swing.JFrame {
 
     /**

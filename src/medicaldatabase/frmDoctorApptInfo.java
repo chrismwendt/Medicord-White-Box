@@ -9,10 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Austin
- */
 public class frmDoctorApptInfo extends javax.swing.JFrame {
 
     /**

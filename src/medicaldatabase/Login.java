@@ -6,10 +6,6 @@ package medicaldatabase;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Seth
- */
 public class Login extends javax.swing.JFrame
 {
 
