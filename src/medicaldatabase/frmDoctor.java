@@ -441,6 +441,13 @@ public class frmDoctor extends javax.swing.JFrame {
                 "Name can only be 20 characters");
           return;
        }
+       
+       if(phoneTextField.getText().length() != 10) {
+    	   JOptionPane.showMessageDialog(this,
+                   "Phone number must be 10 digits long");
+             return;
+       }
+       
             if (maleRadioBtn.isSelected())
             {
                 Importdb.setDoctorProfile(userId, nameTextField.getText(), hospitalTextField.getText(), specialtiesTextField.getText(), "M", phoneTextField.getText());
