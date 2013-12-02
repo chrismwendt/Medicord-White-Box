@@ -179,7 +179,7 @@ public class createAccount extends javax.swing.JFrame {
         if(s==null){
             return false;
         }
-        if(!(s.length()>8 && s.length()<15)){
+        if(!(s.length()>=8 && s.length()<=15)){
             JOptionPane.showMessageDialog(this, "Error, Username must be between 8 and 15 charactors long");
             return false;
         }
@@ -192,7 +192,7 @@ public class createAccount extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error, password must be between 8 and 15 charactors long");
             return false;
         }
-        if(!(s.length()>8 && s.length()<15)){
+        if(!(s.length()>=8 && s.length()<=15)){
             JOptionPane.showMessageDialog(this, "Error, password must be between 8 and 15 charactors long");
             return false;
         }
