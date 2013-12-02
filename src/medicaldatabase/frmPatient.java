@@ -446,6 +446,9 @@ public class frmPatient extends javax.swing.JFrame {
 
     private void bttCancleApptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttCancleApptActionPerformed
         //delete appointments button
+    	if(tblAppointments.getSelectedRow() == -1) {
+    		return;
+    	}
         Importdb.deleteAppointment(apptIds.get(tblAppointments.getSelectedRow()));
         updateApptTable();
     }//GEN-LAST:event_bttCancleApptActionPerformed
