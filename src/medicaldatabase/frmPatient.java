@@ -359,7 +359,13 @@ public class frmPatient extends javax.swing.JFrame {
                 r.next();
                 txtName.setText(r.getString("name"));
                 
-                lblWelcome.setText("Welcome "+r.getString("name")+"!");
+                
+                if(txtName.getText() == null || txtName.getText().isEmpty())
+                {
+                    lblWelcome.setText("Welcome, please fill out your information.");
+                }
+                else lblWelcome.setText("Welcome "+txtName.getText()+"!");
+                
                 
                 txtDob.setText(r.getString("dob"));                
                 
