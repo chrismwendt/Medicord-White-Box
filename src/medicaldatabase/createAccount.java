@@ -179,8 +179,8 @@ public class createAccount extends javax.swing.JFrame {
         if(s==null){
             return false;
         }
-        if(s.length()<5 || s.length()>12){
-            JOptionPane.showMessageDialog(this, "Error, Username must be within 5 to 12 charactors long");
+        if(!(s.length()>8 && s.length()<15)){
+            JOptionPane.showMessageDialog(this, "Error, Username must be between 8 and 15 charactors long");
             return false;
         }
         return true;
@@ -189,11 +189,11 @@ public class createAccount extends javax.swing.JFrame {
     private boolean passwordVerified(String s){
         System.out.println(s);
         if(s==null){
-            JOptionPane.showMessageDialog(this, "Error, password must be between 5 and 15 charactors long");
+            JOptionPane.showMessageDialog(this, "Error, password must be between 8 and 15 charactors long");
             return false;
         }
-        if(s.length()<5 || s.length()>15){
-            JOptionPane.showMessageDialog(this, "Error, password must be between 5 and 15 charactors long");
+        if(!(s.length()>8 && s.length()<15)){
+            JOptionPane.showMessageDialog(this, "Error, password must be between 8 and 15 charactors long");
             return false;
         }
         return true;
