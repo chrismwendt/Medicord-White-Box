@@ -336,6 +336,9 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
 
     private void btnLookupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLookupActionPerformed
         // TODO add your handling code here:
+    	if(cmbDoctors.getSelectedIndex() == -1) {
+    		return;
+    	}
         viewDoctor doctor = new viewDoctor(doctorUids.get(cmbDoctors.getSelectedIndex()));
         doctor.setVisible(true);
     }//GEN-LAST:event_btnLookupActionPerformed
