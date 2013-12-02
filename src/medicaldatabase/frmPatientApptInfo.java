@@ -140,7 +140,7 @@ public class frmPatientApptInfo extends javax.swing.JFrame {
         noteslb = new javax.swing.JLabel();
         txtDate = new javax.swing.JFormattedTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Medicord");
         setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
 

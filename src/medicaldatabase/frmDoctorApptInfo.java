@@ -67,7 +67,7 @@ public class frmDoctorApptInfo extends javax.swing.JFrame {
         txtPatient = new javax.swing.JTextField();
         txtNotes = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Medicord");
         setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
 

@@ -91,7 +91,7 @@ public class viewDoctor extends javax.swing.JFrame {
         maleRadioBtn = new javax.swing.JRadioButton();
         femaleRadioBtn = new javax.swing.JRadioButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Medicord");
         setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
 
