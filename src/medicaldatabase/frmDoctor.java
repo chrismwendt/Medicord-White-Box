@@ -8,11 +8,11 @@ import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.regex.Pattern;
 
 import javax.swing.JOptionPane;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
@@ -30,10 +30,7 @@ public class frmDoctor extends javax.swing.JFrame {
     ArrayList <String> appDates;
     ArrayList<String> appIds;
     ArrayList<String> patientNames;
-    String userId;
-    
-    Timer timer = new Timer();
-    
+    String userId;    
     
     public frmDoctor(Login frm){
         initComponents();
@@ -354,6 +351,15 @@ public class frmDoctor extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Patient List", patientListPanel);
+        
+        jTabbedPane1.addChangeListener(new ChangeListener() {
+           public void stateChanged(ChangeEvent e) {
+              if(jTabbedPane1.getTitleAt(jTabbedPane1.getSelectedIndex()).equals("Patient List"))
+              {
+                 updateApptTable();
+              }
+          }
+      });
 
         jButton1.setText("Logout");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -396,12 +402,6 @@ public class frmDoctor extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        timer.scheduleAtFixedRate(new TimerTask() {
-			@Override
-			public void run() {
-				updateApptTable();
-			}
-        }, 0, 3000);
     }//GEN-LAST:event_formWindowOpened
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
