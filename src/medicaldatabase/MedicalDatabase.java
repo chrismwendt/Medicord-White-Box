@@ -14,16 +14,6 @@ import javax.swing.JOptionPane;
  * @author Seth
  */
 public class MedicalDatabase {
-
-   public static void main(String args[])
-	{ 
-            createdb();
-            //login frame=new login();
-            //frame.setSize(300,100);
-            //frame.setVisible(true);
-             //System.exit(0);
-                    
-	}
 	
 	private static void createdb()
 	{
