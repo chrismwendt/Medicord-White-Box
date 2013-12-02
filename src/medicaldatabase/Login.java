@@ -156,6 +156,7 @@ public class Login extends javax.swing.JFrame
 
     private void createAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountBtnActionPerformed
         // TODO add your handling code here:
+    	this.setVisible(false);
         createAccount cAccount = new createAccount(this);
         cAccount.setVisible(true);
     }//GEN-LAST:event_createAccountBtnActionPerformed
