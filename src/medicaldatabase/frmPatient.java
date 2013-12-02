@@ -417,7 +417,7 @@ public class frmPatient extends javax.swing.JFrame {
     private void bttViewApptInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttViewApptInfoActionPerformed
         // view appointment info button
         String apptId = null;
-        apptId = apptIds.get(Integer.parseInt(tblAppointments.getValueAt(tblAppointments.getSelectedRow(), 0).toString()));
+        apptId = apptIds.get(Integer.parseInt(tblAppointments.getValueAt(tblAppointments.getSelectedRow(), 0).toString()) - 1);
         if(apptId != null){
             frmPatientApptInfo apptInfo = new frmPatientApptInfo(this, id, apptId);
             apptInfo.setVisible(true);
