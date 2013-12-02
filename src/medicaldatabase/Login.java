@@ -140,11 +140,13 @@ public class Login extends javax.swing.JFrame
         {
             frmDoctor frmDoc = new frmDoctor(this);
             frmDoc.setVisible(true);
+            this.setVisible(false);
         }
         else if(userId.charAt(0) == 'p')
         {
             frmPatient frm = new frmPatient(this);
-           
+            frm.setVisible(true);
+            this.setVisible(false);
         }
         else
         {
