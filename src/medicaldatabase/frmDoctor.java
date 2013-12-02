@@ -155,6 +155,7 @@ public class frmDoctor extends javax.swing.JFrame {
         buttonGroup1.add(maleRadioBtn);
         buttonGroup1.add(femaleRadioBtn);
 
+        setBounds(0, 0, 600, 600);
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Medicord");
         setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
