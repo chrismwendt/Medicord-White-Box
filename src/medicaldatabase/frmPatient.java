@@ -9,8 +9,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.util.*;
+import java.util.regex.Pattern;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.MaskFormatter;
+
 import java.io.*;
 /**
  *
@@ -45,6 +49,13 @@ public class frmPatient extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+       MaskFormatter phoneMask = null;
+       MaskFormatter dateMask = null;
+       try {
+          phoneMask = new MaskFormatter("(###) ###-####");
+          dateMask = new MaskFormatter("##/##/##");
+       }
+       catch(Exception e) {}
 
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup1 = new javax.swing.ButtonGroup();
@@ -64,9 +75,9 @@ public class frmPatient extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
-        txtEmergencyContact = new javax.swing.JTextField();
+        txtEmergencyContact = new javax.swing.JFormattedTextField(phoneMask);
         bttSaveChanges = new javax.swing.JButton();
-        txtDob = new javax.swing.JFormattedTextField();
+        txtDob = new javax.swing.JFormattedTextField(dateMask);
         female = new javax.swing.JRadioButton();
         male = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
@@ -94,7 +105,7 @@ public class frmPatient extends javax.swing.JFrame {
 
         jLabel2.setText("Name:");
 
-        jLabel3.setText("Date of birth:");
+        jLabel3.setText("Date of birth (mm/dd/yy):");
 
         jLabel4.setText("Gender:");
 
@@ -156,7 +167,6 @@ public class frmPatient extends javax.swing.JFrame {
         });
 
         txtDob.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-
         female.setText("Female");
 
         male.setText("Male");
@@ -438,23 +448,14 @@ public class frmPatient extends javax.swing.JFrame {
     }//GEN-LAST:event_bttCancleApptActionPerformed
 
     private void bttSaveChangesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttSaveChangesActionPerformed
-        // save changes button
-    	
-    	String[] date = txtDob.getText().split("/");
-    	int month = Integer.parseInt(date[0]);
-    	int day = Integer.parseInt(date[1]);
-    	int year = Integer.parseInt(date[2]);
-    	
-    	    if (txtName.getText().matches("[0-9]+")){
-    	    	JOptionPane.showMessageDialog(this, "Name shouldn't be a number");
-    	    	return;
-    	    } else if(txtEmergencyContact.getText().length() >= 11 || txtEmergencyContact.getText().length() < 7 || !txtEmergencyContact.getText().matches("[0-9]+")) {
-    	    	JOptionPane.showMessageDialog(this, "Emergency Contact number is not valid");
-    	    	return;
-    	    } else if(month > 12 || month < 1 || day > 31 || day < 1 || year < 1 || !date[3].isEmpty()) {
-    	    	JOptionPane.showMessageDialog(this, "Date of birth is not valid or isn't in proper format (mm/dd/yyyy)");
-    	    	return;
-    	    }
+      // save changes button
+      Pattern p = Pattern.compile("[^a-zA-Z\\s]");
+      boolean hasSpecialChar = p.matcher(txtName.getText()).find();
+      if (hasSpecialChar)
+      {
+         JOptionPane.showMessageDialog(this,
+               "Name must be only letters and spaces");
+      }
 
             if (male.isSelected())
             {
@@ -592,7 +593,7 @@ public class frmPatient extends javax.swing.JFrame {
     private javax.swing.JTextArea txaCurrentMedication;
     private javax.swing.JTextArea txaMedicalHistory;
     private javax.swing.JFormattedTextField txtDob;
-    private javax.swing.JTextField txtEmergencyContact;
+    private javax.swing.JFormattedTextField txtEmergencyContact;
     private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }
